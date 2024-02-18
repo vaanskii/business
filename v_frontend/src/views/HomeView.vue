@@ -9,14 +9,27 @@
     </div>
     <div>
       <Carousel/>
+      <div class="flex justify-center items-center mb-40">
+        <div class="w-[800px]">
+          <p class="p-responsive text-gray-500 dark:text-gray-100 text-lg">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+          <p class="p-responsive text-gray-500 dark:text-gray-100 text-lg">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
+        </div>
+      </div>
+      <ImageGallery/>
+      <Footer />
   </div>
 </template>
   
 <script>
 import Carousel from '@/components/Carousel.vue';
+import ImageGallery from '@/components/ImageGallery.vue';
+import Footer from '@/components/Footer.vue'
 export default {
   components: {
-    Carousel
+    Carousel,
+    ImageGallery,
+    Footer
   }
 }
 </script>
@@ -45,6 +58,11 @@ export default {
       line-height: 2.5rem;
       width: 500px;
       margin-left: 80px;
+    }
+    .p-responsive{
+      font-size: 1.5rem;
+      text-align:center;
+      line-height: 2.5rem;
     }
   }
   @media (max-width:911px){
