@@ -9,7 +9,8 @@ def me(request):
     return JsonResponse({
         'id': request.user.id,
         'username': request.user.username,
-        'email': request.user.email
+        'email': request.user.email,
+        'city': request.user.city
     })
 
 @api_view(['POST'])

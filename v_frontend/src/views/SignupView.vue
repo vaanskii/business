@@ -95,6 +95,9 @@ export default{
             if (this.form.password1 === '') {
                 this.errors.push('your password is missing')
             }
+            if (this.form.city === '') {
+                this.errors.push('please choose your city')
+            }
 
             if (this.form.password1 !== this.form.password2) {
                 this.errors.push('The password does not match')
@@ -110,7 +113,7 @@ export default{
                             this.form.name = ''
                             this.form.password1 = ''
                             this.form.password2 = ''
-                            this.form.city = 'batumi'
+                            this.form.city = ''
                         } else{
                             const data = JSON.parse(response.data.message)
                             for (const key in data) {

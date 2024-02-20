@@ -17,14 +17,14 @@
         </div>
       </div>
       <ImageGallery/>
-      <Footer />
   </div>
+  <Footer/>
 </template>
   
 <script>
 import Carousel from '@/components/Carousel.vue';
 import ImageGallery from '@/components/ImageGallery.vue';
-import Footer from '@/components/Footer.vue'
+import Footer from '../components/Footer.vue'
 export default {
   components: {
     Carousel,

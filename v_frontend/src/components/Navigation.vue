@@ -14,7 +14,7 @@
       </button>
       <!-- Dropdown menu -->
       <div 
-      class="fixed mt-[250px] bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-[#212121] dark:divide-gray-600"
+      class="fixed mt-[250px] z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-[#212121] dark:divide-gray-600"
       v-if="dropDown"
       id="dropdown"
       >
@@ -35,24 +35,29 @@
       </div>
       <button class="text-sm border-b  mr-24 ml-3 text-white font-thin">{{ this.userStore.user.username }}</button>
       </template>
-      
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
       <li>
-        <RouterLink to="/" class="block py-2 px-3 text-white bg-blue-900 rounded md:bg-transparent md:p-0 dark:text-white antialiased font-light " aria-current="page">Home</RouterLink>
-      </li>
-      <li>
         <RouterLink to="/about" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light">About</RouterLink>
       </li>
       <li>
+        <RouterLink to="/" class="block py-2 px-3 bg-blue-900 rounded md:bg-transparent md:p-0 dark:text-white antialiased font-light " aria-current="page">
+          <!-- home icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+          <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+        </svg>
+        </RouterLink>
+      </li>
+      <!-- <li>
         <RouterLink to="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Services</RouterLink>
       </li>
       <li>
         <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Pricing</a>
-      </li>
+      </li> -->
       <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Contact</a>
+        <RouterLink to="/contact" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Contact</RouterLink>
       </li>
     </ul>
   </div>
@@ -73,19 +78,27 @@
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
       <li>
-        <RouterLink to="/" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light">Home</RouterLink>
+        <RouterLink to="/about" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light">
+          About
+        </RouterLink>
       </li>
       <li>
-        <RouterLink to="/about" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light">About</RouterLink>
+        <RouterLink to="/" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light">
+           <!-- home icon -->
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+            <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+          </svg>
+        </RouterLink>
       </li>
-      <li>
+      <!-- <li>
         <RouterLink to="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Services</RouterLink>
       </li>
       <li>
         <RouterLink to="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Pricing</RouterLink>
-      </li>
+      </li> -->
       <li>
-        <RouterLink to="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Contact</RouterLink>
+        <RouterLink to="/contact" class="block py-2 px-3 text-gray-900 rounded  md:p-0 dark:text-white antialiased font-light ">Contact</RouterLink>
       </li>
     </ul>
   </div>
@@ -99,7 +112,7 @@ import { useUserStore } from '@/stores/user'
 export default{
     data(){
       return {
-        dropDown: false
+        dropDown: false,
       }
     },
     setup() {

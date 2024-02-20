@@ -12,14 +12,13 @@ import { useUserStore } from '@/stores/user'
 export default{
   setup() {
     const userStore = useUserStore()
-
     return {
       userStore
     }
   },
   components: {
     Toast,
-    Navigation
+    Navigation,
   },
   beforeCreate() {
     this.userStore.initStore()
